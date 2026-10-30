@@ -1,0 +1,756 @@
+/* =========================================
+AI COACH - ANDROID LOGIN PAGE
+SPORTS THEME DESIGN
+========================================= */
+
+/* 1. RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+width: 100%;
+min-height: 100%;
+-webkit-text-size-adjust: 100%;
+scroll-behavior: smooth;
+}
+
+body {
+width: 100%;
+min-height: 100vh;
+min-height: 100dvh;
+
+font-family: Arial, Helvetica, sans-serif;
+
+background: #080b10;
+color: #ffffff;
+
+overflow-x: hidden;
+
+}
+
+/* 2. MAIN PAGE */
+.login-page {
+position: relative;
+
+width: 100%;
+min-height: 100vh;
+min-height: 100dvh;
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+padding:
+    max(18px, env(safe-area-inset-top))
+    18px
+    max(22px, env(safe-area-inset-bottom));
+
+background-color: #080b10;
+
+background-image:
+    linear-gradient(
+        180deg,
+        rgba(5, 9, 13, 0.78),
+        rgba(5, 9, 13, 0.94)
+    ),
+    url("../assets/images/sports-bg.jpg");
+
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+}
+
+/* 3. DARK OVERLAY */
+.login-overlay {
+position: absolute;
+inset: 0;
+
+background:
+    radial-gradient(
+        circle at top right,
+        rgba(182, 255, 0, 0.09),
+        transparent 42%
+    );
+
+pointer-events: none;
+
+}
+
+/* 4. LOGIN CONTAINER */
+.login-container {
+position: relative;
+z-index: 1;
+
+width: 100%;
+max-width: 380px;
+
+margin: auto;
+
+display: flex;
+flex-direction: column;
+
+}
+
+/* 5. LOGO HEADER */
+.login-header {
+width: 100%;
+
+display: flex;
+flex-direction: column;
+align-items: center;
+
+text-align: center;
+
+margin-bottom: 26px;
+
+}
+
+/* Logo icon */
+.logo-icon {
+width: 52px;
+height: 52px;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+border: 2px solid #b6ff00;
+border-radius: 15px;
+
+background: rgba(182, 255, 0, 0.08);
+color: #b6ff00;
+
+font-size: 22px;
+font-weight: 900;
+letter-spacing: 1px;
+
+box-shadow: 0 0 22px rgba(182, 255, 0, 0.12);
+
+margin-bottom: 12px;
+
+}
+
+/* AI COACH title */
+.login-header h1 {
+color: #ffffff;
+
+font-size: 26px;
+font-weight: 900;
+letter-spacing: 2px;
+
+}
+
+.login-header h1 span {
+color: #b6ff00;
+}
+
+/* Tagline */
+.welcome-text {
+margin-top: 8px;
+
+color: #aeb5bf;
+
+font-size: 10px;
+font-weight: 700;
+letter-spacing: 2px;
+line-height: 1.6;
+
+}
+
+/* 6. LOGIN HEADING */
+.login-heading {
+margin-bottom: 23px;
+}
+
+.login-heading h2 {
+color: #ffffff;
+
+font-size: 27px;
+font-weight: 800;
+line-height: 1.25;
+
+}
+
+.login-heading p {
+margin-top: 8px;
+
+color: #aeb5bf;
+
+font-size: 13px;
+line-height: 1.6;
+
+}
+
+/* 7. FORM GROUP */
+.form-group {
+width: 100%;
+margin-bottom: 19px;
+}
+
+/* Field labels */
+.form-group label {
+display: block;
+
+margin-bottom: 9px;
+
+color: #f4f6f8;
+
+font-size: 13px;
+font-weight: 700;
+
+}
+
+/* 8. INPUT BOX */
+.input-box {
+width: 100%;
+min-height: 54px;
+
+display: flex;
+align-items: center;
+
+padding: 0 14px;
+
+border: 1px solid #303844;
+border-radius: 12px;
+
+background: rgba(18, 23, 31, 0.94);
+
+transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+}
+
+/* Focus effect */
+.input-box:focus-within {
+border-color: #b6ff00;
+
+box-shadow:
+    0 0 0 3px rgba(182, 255, 0, 0.08);
+
+}
+
+/* Phone country code */
+.country-code {
+flex-shrink: 0;
+
+color: #b6ff00;
+
+font-size: 14px;
+font-weight: 700;
+
+white-space: nowrap;
+
+}
+
+/* Divider after +91 */
+.input-divider {
+width: 1px;
+height: 24px;
+
+flex-shrink: 0;
+
+margin: 0 12px;
+
+background: #39414d;
+
+}
+
+/* Input fields */
+.input-box input {
+width: 100%;
+min-width: 0;
+height: 50px;
+
+border: none;
+outline: none;
+
+background: transparent;
+
+color: #ffffff;
+
+font-family: inherit;
+font-size: 14px;
+
+}
+
+/* Placeholder */
+.input-box input::placeholder {
+color: #777f8c;
+opacity: 1;
+}
+
+/* Password input */
+.password-box input {
+flex: 1;
+}
+
+/* 9. PASSWORD LABEL ROW */
+.password-label {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 8px;
+}
+
+.password-label label {
+margin-bottom: 9px;
+}
+
+/* Forgot password */
+.forgot-password {
+padding: 0;
+margin-bottom: 9px;
+
+border: none;
+background: transparent;
+
+color: #b6ff00;
+
+font-family: inherit;
+font-size: 11px;
+font-weight: 600;
+
+cursor: pointer;
+
+}
+
+/* Show / hide password */
+.toggle-password {
+flex-shrink: 0;
+
+padding: 8px 0 8px 10px;
+
+border: none;
+background: transparent;
+
+color: #b6ff00;
+
+font-family: inherit;
+font-size: 12px;
+font-weight: 700;
+
+cursor: pointer;
+
+}
+
+/* 10. STATUS MESSAGE */
+.status-message {
+min-height: 0;
+
+margin-bottom: 0;
+
+color: #ff7777;
+
+font-size: 12px;
+line-height: 1.5;
+
+}
+
+.status-message:not(:empty) {
+margin-bottom: 12px;
+}
+
+/* 11. PRIMARY LOGIN BUTTON */
+.primary-button {
+width: 100%;
+min-height: 54px;
+
+padding: 13px 18px;
+
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 12px;
+
+border: none;
+border-radius: 12px;
+
+background: #b6ff00;
+color: #080b10;
+
+font-family: inherit;
+font-size: 15px;
+font-weight: 900;
+letter-spacing: 2px;
+
+cursor: pointer;
+
+box-shadow: 0 5px 18px rgba(182, 255, 0, 0.13);
+
+transition:
+    transform 0.15s ease,
+    background 0.2s ease;
+
+-webkit-tap-highlight-color: transparent;
+
+}
+
+.primary-button span {
+font-size: 21px;
+line-height: 1;
+}
+
+.primary-button:active {
+transform: scale(0.98);
+}
+
+.primary-button:disabled {
+opacity: 0.65;
+cursor: not-allowed;
+}
+
+/* 12. SIGN UP SECTION */
+.signup-section {
+width: 100%;
+
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+gap: 7px;
+
+margin-top: 21px;
+
+text-align: center;
+
+}
+
+.signup-section p {
+color: #aeb5bf;
+
+font-size: 12px;
+line-height: 1.6;
+
+}
+
+/* Sign up button */
+.signup-button {
+padding: 5px 2px;
+
+border: none;
+background: transparent;
+
+color: #b6ff00;
+
+font-family: inherit;
+font-size: 12px;
+font-weight: 800;
+letter-spacing: 0.5px;
+
+cursor: pointer;
+
+}
+
+/* 13. DIVIDER */
+.divider {
+width: 100%;
+
+display: flex;
+align-items: center;
+gap: 12px;
+
+margin: 23px 0 19px;
+
+}
+
+.divider span {
+flex: 1;
+height: 1px;
+
+background: #303844;
+
+}
+
+.divider p {
+flex-shrink: 0;
+
+color: #8e97a4;
+
+font-size: 9px;
+font-weight: 700;
+letter-spacing: 1.2px;
+
+}
+
+/* 14. GOOGLE BUTTON */
+.google-button {
+width: 100%;
+min-height: 54px;
+
+padding: 10px 15px;
+
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 12px;
+
+border: 1px solid #343c48;
+border-radius: 12px;
+
+background: rgba(18, 23, 31, 0.94);
+color: #ffffff;
+
+font-family: inherit;
+font-size: 13px;
+font-weight: 700;
+
+cursor: pointer;
+
+transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+
+-webkit-tap-highlight-color: transparent;
+
+}
+
+.google-button:active {
+background: #202731;
+border-color: #b6ff00;
+}
+
+/* Google G badge */
+.google-badge {
+width: 25px;
+height: 25px;
+
+flex-shrink: 0;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+border-radius: 50%;
+
+background: #ffffff;
+
+font-family: Arial, Helvetica, sans-serif;
+font-size: 18px;
+font-weight: 900;
+
+color: #4285f4;
+
+}
+
+/* 15. FOOTER */
+.login-footer {
+width: 100%;
+
+margin-top: 22px;
+
+text-align: center;
+
+}
+
+.login-footer p {
+color: #828b98;
+
+font-size: 10px;
+line-height: 1.8;
+
+}
+
+.login-footer a {
+color: #b6ff00;
+text-decoration: none;
+}
+
+/* 16. SMALL ANDROID PHONES */
+@media screen and (max-width: 360px) {
+.login-page {
+padding-left: 15px;
+padding-right: 15px;
+}
+
+.login-header {
+    margin-bottom: 21px;
+}
+
+.logo-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 20px;
+}
+
+.login-header h1 {
+    font-size: 23px;
+}
+
+.login-heading {
+    margin-bottom: 19px;
+}
+
+.login-heading h2 {
+    font-size: 24px;
+}
+
+.login-heading p {
+    font-size: 12px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.input-box {
+    min-height: 50px;
+    padding-left: 11px;
+    padding-right: 11px;
+}
+
+.input-box input {
+    height: 48px;
+    font-size: 13px;
+}
+
+.input-divider {
+    margin-left: 9px;
+    margin-right: 9px;
+}
+
+.country-code {
+    font-size: 13px;
+}
+
+.forgot-password {
+    font-size: 10px;
+}
+
+.primary-button {
+    min-height: 51px;
+}
+
+.signup-section {
+    margin-top: 17px;
+}
+
+.divider {
+    margin-top: 19px;
+    margin-bottom: 16px;
+    gap: 8px;
+}
+
+.divider p {
+    font-size: 8px;
+    letter-spacing: 0.8px;
+}
+
+.google-button {
+    min-height: 50px;
+    font-size: 12px;
+}
+
+.login-footer {
+    margin-top: 18px;
+}
+
+}
+
+/* 17. SHORT ANDROID SCREENS */
+@media screen and (max-height: 740px) {
+.login-header {
+margin-bottom: 18px;
+}
+
+.logo-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 8px;
+}
+
+.welcome-text {
+    margin-top: 5px;
+}
+
+.login-heading {
+    margin-bottom: 17px;
+}
+
+.form-group {
+    margin-bottom: 14px;
+}
+
+.signup-section {
+    margin-top: 15px;
+}
+
+.divider {
+    margin-top: 17px;
+    margin-bottom: 14px;
+}
+
+.login-footer {
+    margin-top: 15px;
+}
+
+}
+
+/* 18. VERY SHORT SCREENS */
+@media screen and (max-height: 600px) {
+.login-page {
+justify-content: flex-start;
+}
+
+.login-container {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.login-header {
+    margin-bottom: 14px;
+}
+
+.logo-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 17px;
+    border-radius: 11px;
+}
+
+.login-header h1 {
+    font-size: 21px;
+}
+
+.login-heading h2 {
+    font-size: 22px;
+}
+
+.login-heading p {
+    margin-top: 5px;
+}
+
+.input-box {
+    min-height: 46px;
+}
+
+.input-box input {
+    height: 44px;
+}
+
+.primary-button,
+.google-button {
+    min-height: 46px;
+}
+
+.login-footer {
+    margin-top: 12px;
+}
+
+}
+
+/* 19. REDUCE MOTION WHEN REQUESTED */
+@media (prefers-reduced-motion: reduce) {
+*,
+*::before,
+*::after {
+scroll-behavior: auto !important;
+transition-duration: 0.01ms !important;
+}
+}

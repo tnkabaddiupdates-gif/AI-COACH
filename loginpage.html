@@ -1,0 +1,195 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="theme-color" content="#080b10">
+
+<title>AI COACH | Login</title>
+
+<!-- Login CSS -->
+<link rel="stylesheet" href="loginpage.css">
+
+</head><body><main class="login-page">
+
+    <!-- Background overlay -->
+    <div class="login-overlay"></div>
+
+    <!-- Main login container -->
+    <section class="login-container">
+
+        <!-- Logo -->
+        <header class="login-header">
+
+            <div class="logo-icon">AI</div>
+
+            <h1>AI <span>COACH</span></h1>
+
+            <p class="welcome-text">
+                YOUR JOURNEY. YOUR STRENGTH.
+            </p>
+
+        </header>
+
+        
+
+        <!-- Login heading -->
+        <div class="login-heading">
+
+            <h2>Welcome Back!</h2>
+
+            <p>Login to continue your fitness journey.</p>
+
+        </div>
+
+        <!-- Login form -->
+        <form id="loginForm" novalidate>
+
+            <!-- Phone number -->
+            <div class="form-group">
+
+                <label for="phone">Phone Number</label>
+
+                <div class="input-box">
+
+                    <span class="country-code">+91</span>
+
+                    <span class="input-divider"></span>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter 10-digit number"
+                        inputmode="numeric"
+                        autocomplete="tel-national"
+                        maxlength="10"
+                        pattern="[0-9]{10}"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+
+                <div class="password-label">
+
+                    <label for="password">Password</label>
+
+                    <button
+                        type="button"
+                        class="forgot-password"
+                        id="forgotPassword"
+                    >
+                        Forgot Password?
+                    </button>
+
+                </div>
+
+                <div class="input-box password-box">
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="toggle-password"
+                        id="togglePassword"
+                        aria-label="Show password"
+                    >
+                        Show
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Error / status message -->
+            <p
+                id="loginMessage"
+                class="status-message"
+                role="status"
+                aria-live="polite"
+            ></p>
+
+            <!-- Login button -->
+            <button
+                type="submit"
+                class="primary-button"
+                id="loginButton"
+            >
+                LOGIN
+                <span aria-hidden="true">→</span>
+            </button>
+
+        </form>
+
+        <!-- Sign up section -->
+        <div class="signup-section">
+
+            <p>Don't have an account?</p>
+
+            <button
+                type="button"
+                class="signup-button"
+                id="signupButton"
+            >
+                SIGN UP
+            </button>
+
+        </div>
+
+        <!-- Divider -->
+        <div class="divider">
+
+            <span></span>
+
+            <p>OR CONTINUE WITH</p>
+
+            <span></span>
+
+        </div>
+
+        <!-- Google login -->
+        <button
+            type="button"
+            class="google-button"
+            id="googleLogin"
+        >
+
+            <span class="google-badge" aria-hidden="true">G</span>
+
+            <span>Continue with Google</span>
+
+        </button>
+
+        <!-- Footer -->
+        <footer class="login-footer">
+
+            <p>
+                By continuing, you agree to our
+                <a href="#" id="termsLink">Terms</a>
+                and
+                <a href="#" id="privacyLink">Privacy Policy</a>.
+            </p>
+
+        </footer>
+
+    </section>
+
+</main>
+
+<!-- Login JavaScript -->
+<script src="login.js"></script>
+
+</body>
+</html>

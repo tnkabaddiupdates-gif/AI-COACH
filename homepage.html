@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#071321">
+
+    <title>AI COACH | Home</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="homepage.css">
+</head>
+
+<body>
+
+    <!-- Main Homepage -->
+    <main class="home-page">
+
+        <!-- Dark Background Overlay -->
+        <div class="background-overlay"></div>
+
+        <!-- All Content -->
+        <div class="home-content">
+
+            <!-- Header -->
+            <header class="header">
+
+                <a href="home.html" class="logo">
+                    <span class="logo-icon">🏃</span>
+
+                    <span class="logo-text">
+                        AI <span>COACH</span>
+                    </span>
+                </a>
+
+                <button
+                    type="button"
+                    class="menu-button"
+                    aria-label="Open menu"
+                    onclick="toggleMenu()">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </header>
+
+            <!-- Navigation Menu -->
+            <nav class="navigation" id="navigation">
+
+                <a href="home.html">Home</a>
+
+                <a href="running-tracker/running.html">
+                    Running Tracker
+                </a>
+
+                <a href="fitness-guidance/fitness.html">
+                    Fitness Guidance
+                </a>
+
+                <a href="diet-rules/diet.html">
+                    Diet Rules
+                </a>
+
+                <a href="schedule/schedule.html">
+                    Schedule
+                </a>
+
+            </nav>
+
+            <!-- Page Heading -->
+            <section class="hero">
+
+                <h1>
+                    YOUR
+                    <span>ATHLETE HOME</span>
+                </h1>
+
+                <p>
+                    Train smart. Play better. Win more.
+                </p>
+
+            </section>
+
+            <!-- Home Buttons -->
+            <section class="features">
+
+                <!-- Running Tracker -->
+                <a href="running-tracker/running.html"
+                   class="feature-card">
+
+                    <div class="feature-icon">🏃</div>
+
+                    <div class="feature-text">
+                        <h2>Running Tracker</h2>
+
+                        <p>
+                            Track your stride and pace
+                        </p>
+                    </div>
+
+                    <span class="arrow">›</span>
+
+                </a>
+
+                <!-- Fitness Guidance -->
+                <a href="fitness-guidance/fitness.html"
+                   class="feature-card">
+
+                    <div class="feature-icon">💪</div>
+
+                    <div class="feature-text">
+                        <h2>Fitness Guidance</h2>
+
+                        <p>
+                            Form correction and tips
+                        </p>
+                    </div>
+
+                    <span class="arrow">›</span>
+
+                </a>
+
+                <!-- Diet Rules -->
+                <a href="diet-rules/diet.html"
+                   class="feature-card">
+
+                    <div class="feature-icon">🥗</div>
+
+                    <div class="feature-text">
+                        <h2>Diet Rules</h2>
+
+                        <p>
+                            Performance nutrition guidelines
+                        </p>
+                    </div>
+
+                    <span class="arrow">›</span>
+
+                </a>
+
+                <!-- Schedule and Calendar -->
+                <div class="small-cards">
+
+                    <a href="schedule/schedule.html"
+                       class="feature-card small-card">
+
+                        <div class="feature-icon">⏱️</div>
+
+                        <div class="feature-text">
+                            <h2>Schedule</h2>
+
+                            <p>
+                                Plan training and meals
+                            </p>
+                        </div>
+
+                    </a>
+
+                    <a href="calendar/calendar.html"
+                       class="feature-card small-card">
+
+                        <div class="feature-icon">🗓️</div>
+
+                        <div class="feature-text">
+                            <h2>Calendar</h2>
+
+                            <p>
+                                Track progress and events
+                            </p>
+                        </div>
+
+                    </a>
+
+                </div>
+
+                <!-- Stretching -->
+                <a href="stretching/stretching.html"
+                   class="feature-card">
+
+                    <div class="feature-icon">🧘</div>
+
+                    <div class="feature-text">
+                        <h2>Stretching</h2>
+
+                        <p>
+                            Warm-ups, cool-downs and flexibility
+                        </p>
+                    </div>
+
+                    <span class="arrow">›</span>
+
+                </a>
+
+            </section>
+
+            <!-- AI Box Section -->
+            <section class="ai-section">
+
+                <div class="ai-panel">
+
+                    <h2>ASK AI BOX...</h2>
+
+                    <form id="aiForm">
+
+                        <input
+                            type="text"
+                            id="aiQuestion"
+                            placeholder="Ask your fitness question..."
+                            aria-label="Ask your fitness question"
+                            required
+                        >
+
+                        <button type="submit" class="ai-button">
+                            🤖 AI BOX
+                            <span>→</span>
+                        </button>
+
+                    </form>
+
+                    <p id="aiMessage" class="ai-message"
+                       aria-live="polite"></p>
+
+                </div>
+
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <p>© 2026 AI COACH | Train Better Every Day</p>
+            </footer>
+
+        </div>
+
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+
+        // Open and close navigation menu
+        function toggleMenu() {
+
+            const navigation =
+                document.getElementById("navigation");
+
+            navigation.classList.toggle("show");
+
+        }
+
+        // AI question form
+        document.getElementById("aiForm")
+            .addEventListener("submit", function (event) {
+
+                event.preventDefault();
+
+                const question =
+                    document.getElementById("aiQuestion").value.trim();
+
+                const message =
+                    document.getElementById("aiMessage");
+
+                if (question === "") {
+                    message.textContent =
+                        "Please enter your question.";
+                    return;
+                }
+
+                // AI backend is not connected yet
+                message.textContent =
+                    "Your question is ready: " + question +
+                    ". AI connection will be added later.";
+
+            });
+
+    </script>
+
+</body>
+</html>
