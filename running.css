@@ -1,0 +1,493 @@
+/* =====================================
+   GLOBAL SETTINGS
+===================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: #071226;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =====================================
+   MAIN PAGE — FIT SCREEN
+===================================== */
+
+.running-page {
+    width: 100%;
+    max-width: 600px;
+
+    height: 100vh;
+    height: 100dvh;
+
+    margin: 0 auto;
+
+    padding: 10px 12px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(2, 8, 25, 0.78),
+            rgba(2, 8, 25, 0.86)
+        ),
+        url("../assets/images/sports-bg.jpg")
+        center / cover no-repeat;
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+.header {
+    flex: 0 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 32px;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+
+    font-size: clamp(17px, 4vw, 23px);
+    font-weight: 900;
+    font-style: italic;
+}
+
+.menu-button {
+    border: none;
+    background: transparent;
+    color: white;
+
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* =====================================
+   PAGE TITLE
+===================================== */
+
+.page-title {
+    flex: 0 0 auto;
+
+    font-size: clamp(21px, 5.5vw, 34px);
+    font-weight: 900;
+    font-style: italic;
+
+    text-align: center;
+
+    line-height: 1.1;
+    white-space: nowrap;
+
+    margin: 2px 0;
+}
+
+.page-title span {
+    color: #67caff;
+}
+
+
+/* =====================================
+   STATISTICS PANELS
+===================================== */
+
+.stats-panel,
+.map-panel {
+    min-width: 0;
+    border: 2px solid #76d8ff;
+    border-radius: 18px;
+
+    padding: 7px;
+
+    background: rgba(7, 18, 40, 0.86);
+
+    box-shadow:
+        0 0 8px rgba(48, 188, 255, 0.5),
+        inset 0 0 8px rgba(48, 188, 255, 0.12);
+}
+
+
+/* Top and bottom stats */
+
+.top-stats,
+.bottom-stats {
+    flex: 0 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 7px;
+}
+
+
+/* Individual statistic card */
+
+.stat-card {
+    min-width: 0;
+
+    padding: 8px 2px;
+
+    text-align: center;
+
+    border: 1.5px solid #79d8ff;
+    border-radius: 12px;
+
+    background: rgba(9, 21, 44, 0.96);
+
+    box-shadow:
+        0 0 5px rgba(55, 191, 255, 0.35);
+}
+
+.stat-card p {
+    font-size: clamp(9px, 2.5vw, 13px);
+
+    line-height: 1.2;
+}
+
+.stat-card h2 {
+    margin-top: 4px;
+
+    font-size: clamp(20px, 5.5vw, 30px);
+    font-weight: 800;
+
+    line-height: 1.1;
+    overflow-wrap: anywhere;
+}
+
+.stat-card small {
+    font-size: clamp(10px, 2.7vw, 13px);
+    color: #e1eaff;
+}
+
+
+/* =====================================
+   MAP — USE REMAINING SPACE
+===================================== */
+
+.map-panel {
+    flex: 1 1 auto;
+
+    min-height: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 6px;
+}
+
+#map {
+    flex: 1 1 auto;
+
+    width: 100%;
+    height: 100%;
+
+    min-height: 0;
+
+    border-radius: 12px;
+    overflow: hidden;
+
+    background: #17263b;
+}
+
+.map-message {
+    padding: 15px;
+    text-align: center;
+}
+
+.status-message {
+    flex: 0 0 auto;
+
+    padding: 5px 2px 1px;
+
+    text-align: center;
+
+    color: #aee8ff;
+    font-size: 11px;
+
+    line-height: 1.2;
+}
+
+
+/* =====================================
+   AI TRACK COACH
+===================================== */
+
+.bottom-stats {
+    padding: 8px;
+}
+
+.ai-button {
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    padding: 11px 5px;
+
+    border: 2px solid #63d9ff;
+    border-radius: 12px;
+
+    background: linear-gradient(
+        120deg,
+        #063ac5,
+        #075aff
+    );
+
+    color: white;
+
+    font-size: clamp(17px, 4.5vw, 25px);
+    font-weight: 900;
+    font-style: italic;
+
+    line-height: 1.1;
+
+    box-shadow:
+        0 0 10px rgba(42, 174, 255, 0.65);
+
+    cursor: pointer;
+}
+
+
+/* =====================================
+   START / PAUSE / RESUME / STOP
+===================================== */
+
+.controls {
+    flex: 0 0 auto;
+
+    display: flex;
+    justify-content: center;
+
+    gap: 10px;
+
+    width: 100%;
+}
+
+.control-button {
+    flex: 1 1 0;
+
+    min-width: 0;
+    max-width: 200px;
+
+    padding: 12px 4px;
+
+    color: white;
+
+    font-size: clamp(16px, 4vw, 23px);
+    font-weight: 900;
+    font-style: italic;
+
+    line-height: 1.1;
+
+    border: 2px solid;
+    border-radius: 12px;
+
+    cursor: pointer;
+}
+
+
+/* Start and Resume */
+
+.start,
+.resume {
+    background: linear-gradient(
+        120deg,
+        #063cc8,
+        #087aff
+    );
+
+    border-color: #6dd9ff;
+
+    box-shadow: 0 0 9px #087aff;
+}
+
+
+/* Pause */
+
+.pause {
+    background: linear-gradient(
+        120deg,
+        #063cc8,
+        #087aff
+    );
+
+    border-color: #6dd9ff;
+
+    box-shadow: 0 0 9px #087aff;
+}
+
+
+/* Stop */
+
+.stop {
+    background: linear-gradient(
+        120deg,
+        #9c0717,
+        #ef2437
+    );
+
+    border-color: #ff8791;
+
+    box-shadow: 0 0 9px #ed2536;
+}
+
+
+/* Hide inactive buttons */
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* =====================================
+   FOOTER MESSAGE
+===================================== */
+
+.footer-text {
+    flex: 0 0 auto;
+
+    margin-top: 0;
+
+    text-align: center;
+
+    color: #aee8ff;
+
+    font-size: clamp(10px, 2.8vw, 13px);
+
+    line-height: 1.2;
+
+    padding-bottom: 2px;
+}
+
+
+/* =====================================
+   SHORT MOBILE SCREENS
+===================================== */
+
+@media (max-height: 700px) {
+
+    .running-page {
+        padding: 6px 9px;
+        gap: 5px;
+    }
+
+    .header {
+        min-height: 25px;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .menu-button {
+        font-size: 24px;
+    }
+
+    .page-title {
+        font-size: clamp(18px, 4.8vw, 27px);
+        margin: 0;
+    }
+
+    .stats-panel,
+    .map-panel {
+        border-radius: 14px;
+        padding: 5px;
+    }
+
+    .top-stats,
+    .bottom-stats {
+        gap: 5px;
+    }
+
+    .stat-card {
+        padding: 5px 2px;
+        border-radius: 9px;
+    }
+
+    .stat-card h2 {
+        font-size: clamp(18px, 5vw, 25px);
+    }
+
+    .stat-card p {
+        font-size: clamp(8px, 2.2vw, 11px);
+    }
+
+    .stat-card small {
+        font-size: 10px;
+    }
+
+    .ai-button {
+        padding: 8px 4px;
+        font-size: clamp(15px, 4vw, 21px);
+    }
+
+    .control-button {
+        padding: 9px 3px;
+        font-size: clamp(15px, 3.8vw, 20px);
+    }
+
+    .footer-text {
+        font-size: 10px;
+    }
+}
+
+
+/* =====================================
+   VERY SHORT SCREENS
+===================================== */
+
+@media (max-height: 580px) {
+
+    .running-page {
+        padding: 4px 7px;
+        gap: 4px;
+    }
+
+    .page-title {
+        font-size: 18px;
+    }
+
+    .stat-card {
+        padding: 4px 1px;
+    }
+
+    .stat-card h2 {
+        font-size: 17px;
+    }
+
+    .ai-button {
+        padding: 6px 3px;
+        font-size: 15px;
+    }
+
+    .control-button {
+        padding: 7px 3px;
+        font-size: 15px;
+    }
+
+    .footer-text {
+        font-size: 9px;
+    }
+}

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#071321">
+
+    <title>AI COACH | Fitness Guidance</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="fitness.css">
+</head>
+
+<body>
+
+    <main class="fitness-page">
+
+        <!-- Background Effect -->
+        <div class="background-overlay"></div>
+
+        <div class="page-content">
+
+            <!-- HEADER -->
+            <header class="header">
+
+                <a href="../homepage.html" class="logo">
+                    <span class="logo-icon">🏃</span>
+
+                    <span class="logo-text">
+                        AI <span>COACH</span>
+                    </span>
+                </a>
+
+                <button
+                    type="button"
+                    class="menu-button"
+                    id="menuButton"
+                    aria-label="Open navigation menu">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </header>
+
+            <!-- NAVIGATION -->
+            <nav class="navigation" id="navigation">
+
+                <a href="../homepage.html">Home</a>
+
+                <a href="../Runningtracker/running.html">
+                    Running Tracker
+                </a>
+
+                <a href="fitness.html">
+                    Fitness Guidance
+                </a>
+
+                <a href="../diet-rules/diet.html">
+                    Diet Rules
+                </a>
+
+                <a href="../schedule/schedule.html">
+                    Schedule
+                </a>
+
+            </nav>
+
+            <!-- PAGE TITLE -->
+            <section class="hero">
+
+                <h1>
+                    INJURY TO RECOVER
+                    <span>WORKOUTS</span>
+                </h1>
+
+            </section>
+
+            <!-- AI ANALYSIS PANEL -->
+            <section class="analysis-panel">
+
+                <div class="anatomy-icon">
+                    🦵
+                </div>
+
+                <div class="anatomy-icon">
+                    💪
+                </div>
+
+                <div class="analysis-text">
+
+                    <h2>AI BODY ANALYSIS</h2>
+
+                    <p>
+                        Posture and mobility guidance
+                        for safer workouts.
+                    </p>
+
+                    <span class="status">
+                        ● TRAIN SMART
+                    </span>
+
+                </div>
+
+            </section>
+
+            <!-- WORKOUT CARDS -->
+            <section class="workout-list">
+
+                <!-- CHEST -->
+                <a href="chest/chest.html"
+                   class="workout-card">
+
+                    <div class="workout-icon">
+                        🧠
+                    </div>
+
+                    <div class="workout-text">
+
+                        <h2>CHEST</h2>
+
+                        <p>
+                            Chest exercises and
+                            upper-body form guidance.
+                        </p>
+
+                        <span>FORM: TRAIN CAREFULLY</span>
+
+                    </div>
+
+                    <div class="workout-image">
+                        🏋️
+                    </div>
+
+                    <span class="arrow">›</span>
+
+                </a>
+
+                <!-- SHOULDER -->
+                <a href="shoulder/shoulder.html"
+                   class="workout-card">
+
+                    <div class="workout-icon">
+                        🧠
+                    </div>
+
+                    <div class="workout-text">
+
+                        <h2>SHOULDER</h2>
+
+                        <p>
+                            Shoulder mobility and
+                            pressing technique.
+                        </p>
+
+                        <span>FORM: CHECK POSTURE</span>
+
+                    </div>
+
+                    <div class="workout-image">
+                        🏋️‍♂️
+                    </div>
+
+                    <span class="arrow">›</span>
+
+                </a>
+
+                <!-- ABS -->
+                <a href="abs/abs.html"
+                   class="workout-card">
+
+                    <div class="workout-icon">
+                        🛡️
+                    </div>
+
+                    <div class="workout-text">
+
+                        <h2>ABS</h2>
+
+                        <p>
+                            Core stability and
+                            abdominal exercises.
+                        </p>
+
+                        <span>FORM: CONTROLLED MOVEMENT</span>
+
+                    </div>
+
+                    <div class="workout-image">
+                        💪
+                    </div>
+
+                    <span class="arrow">›</span>
+
+                </a>
+
+                <!-- BACK -->
+                <a href="back/back.html"
+                   class="workout-card">
+
+                    <div class="workout-icon">
+                        🧠
+                    </div>
+
+                    <div class="workout-text">
+
+                        <h2>BACK</h2>
+
+                        <p>
+                            Back exercises and
+                            scapular movement guidance.
+                        </p>
+
+                        <span>FORM: MAINTAIN ALIGNMENT</span>
+
+                    </div>
+
+                    <div class="workout-image">
+                        🏋️
+                    </div>
+
+                    <span class="arrow">›</span>
+
+                </a>
+
+                <!-- LEG -->
+                <a href="leg/leg.html"
+                   class="workout-card">
+
+                    <div class="workout-icon">
+                        🦵
+                    </div>
+
+                    <div class="workout-text">
+
+                        <h2>LEG</h2>
+
+                        <p>
+                            Squat technique and
+                            lower-body training.
+                        </p>
+
+                        <span>FORM: CHECK KNEE POSITION</span>
+
+                    </div>
+
+                    <div class="workout-image">
+                        🏃
+                    </div>
+
+                    <span class="arrow">›</span>
+
+                </a>
+
+            </section>
+
+            <!-- AI BOX -->
+            <section class="ai-section">
+
+                <div class="ai-panel">
+
+                    <h2>ASK AI BOX...</h2>
+
+                    <form id="aiForm">
+
+                        <input
+                            type="text"
+                            id="aiQuestion"
+                            placeholder="Ask about your workout..."
+                            aria-label="Ask a fitness question"
+                            required>
+
+                        <button type="submit"
+                                class="ai-button">
+
+                            🤖 AI BOX
+                            <span>→</span>
+
+                        </button>
+
+                    </form>
+
+                    <p id="aiMessage"
+                       class="ai-message"
+                       aria-live="polite"></p>
+
+                </div>
+
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="footer">
+                AI COACH | TRAIN SMART • STAY STRONG
+            </footer>
+
+        </div>
+
+    </main>
+
+    <!-- Connect JavaScript -->
+    <script src="fitness.js"></script>
+
+</body>
+</html>

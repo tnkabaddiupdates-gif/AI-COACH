@@ -1,0 +1,548 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #071321;
+    color: white;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+/* MAIN PAGE */
+.diet-page {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    overflow: hidden;
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(0, 128, 255, 0.22),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 70%,
+            rgba(0, 220, 255, 0.15),
+            transparent 35%
+        ),
+        linear-gradient(
+            145deg,
+            #071321,
+            #102c49,
+            #06101d
+        );
+}
+
+/* BACKGROUND OVERLAY */
+.background-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: repeating-linear-gradient(
+        120deg,
+        transparent 0,
+        transparent 35px,
+        rgba(0, 190, 255, 0.025) 36px,
+        transparent 38px
+    );
+
+    pointer-events: none;
+}
+
+/* MAIN CONTENT */
+.page-content {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: 600px;
+    margin: 0 auto;
+
+    padding: 12px 16px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+/* HEADER */
+.header {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-icon {
+    font-size: 29px;
+}
+
+.logo-text {
+    font-size: 21px;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.logo-text span {
+    color: #43cfff;
+}
+
+/* MENU BUTTON */
+.menu-button {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+}
+
+.menu-button span {
+    width: 29px;
+    height: 3px;
+
+    background: white;
+    border-radius: 5px;
+}
+
+/* NAVIGATION */
+.navigation {
+    display: none;
+    flex-direction: column;
+    gap: 3px;
+
+    padding: 8px;
+    margin-bottom: 8px;
+
+    background: rgba(3, 15, 30, 0.98);
+
+    border: 1px solid #36cfff;
+    border-radius: 12px;
+}
+
+.navigation.show {
+    display: flex;
+}
+
+.navigation a {
+    padding: 8px;
+    font-size: 13px;
+    border-radius: 6px;
+}
+
+.navigation a:hover {
+    background: rgba(0, 195, 255, 0.15);
+    color: #51d9ff;
+}
+
+/* HEADING */
+.hero {
+    flex-shrink: 0;
+
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(23px, 5.5vw, 35px);
+    font-weight: 900;
+    font-style: italic;
+    line-height: 1.15;
+}
+
+.hero h1 span {
+    color: #50d4ff;
+}
+
+/* DIET PANEL */
+.diet-panel {
+    flex: 1;
+    min-height: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    padding: 12px;
+
+    border: 2px solid #53d9ff;
+    border-radius: 23px;
+
+    background: rgba(7, 20, 38, 0.82);
+
+    box-shadow:
+        0 0 10px #19bfff,
+        inset 0 0 15px rgba(0, 183, 255, 0.12);
+}
+
+/* PANEL TITLE */
+.panel-title,
+.ai-title {
+    flex-shrink: 0;
+
+    text-align: center;
+
+    padding: 10px 6px;
+    margin-bottom: 10px;
+
+    font-size: clamp(15px, 3.8vw, 23px);
+
+    background: rgba(5, 18, 35, 0.85);
+
+    border: 1.5px solid #55d8ff;
+    border-radius: 11px;
+
+    box-shadow: 0 0 8px rgba(0, 195, 255, 0.4);
+}
+
+/* DIET CARD */
+.diet-card {
+    position: relative;
+
+    flex: 1;
+    min-height: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 9px;
+    margin-bottom: 10px;
+
+    overflow: hidden;
+
+    background: linear-gradient(
+        110deg,
+        rgba(5, 18, 35, 0.97),
+        rgba(12, 37, 59, 0.94),
+        rgba(20, 70, 95, 0.85)
+    );
+
+    border: 1.5px solid #55d8ff;
+    border-radius: 17px;
+
+    box-shadow:
+        0 0 7px rgba(0, 195, 255, 0.35),
+        inset 0 0 10px rgba(0, 195, 255, 0.08);
+
+    transition: box-shadow 0.2s ease;
+}
+
+.diet-card:last-child {
+    margin-bottom: 0;
+}
+
+.diet-card:hover {
+    box-shadow: 0 0 14px rgba(0, 195, 255, 0.7);
+}
+
+/* ICON */
+.diet-icon {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: clamp(30px, 8vw, 48px);
+
+    font-size: clamp(23px, 6vw, 34px);
+}
+
+/* CARD TEXT */
+.diet-text {
+    flex: 1;
+    min-width: 0;
+
+    position: relative;
+    z-index: 1;
+}
+
+.diet-text h2 {
+    margin-bottom: 5px;
+
+    font-size: clamp(14px, 3.8vw, 21px);
+    font-weight: 800;
+
+    overflow-wrap: anywhere;
+}
+
+.diet-text p {
+    color: #e2eaf4;
+
+    font-size: clamp(10px, 2.9vw, 14px);
+    line-height: 1.35;
+}
+
+/* DECORATIVE FOOD EMOJI */
+.diet-image {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: clamp(36px, 10vw, 60px);
+    height: 75%;
+
+    font-size: clamp(23px, 6vw, 38px);
+
+    border-radius: 10px;
+    background: rgba(20, 55, 75, 0.6);
+}
+
+.gain-image {
+    background: linear-gradient(
+        135deg,
+        rgba(50, 70, 75, 0.2),
+        rgba(180, 110, 50, 0.3)
+    );
+}
+
+.loss-image {
+    background: linear-gradient(
+        135deg,
+        rgba(30, 100, 60, 0.2),
+        rgba(100, 180, 100, 0.3)
+    );
+}
+
+.maintain-image {
+    background: linear-gradient(
+        135deg,
+        rgba(30, 100, 70, 0.2),
+        rgba(160, 180, 60, 0.3)
+    );
+}
+
+/* ARROW */
+.arrow {
+    flex-shrink: 0;
+
+    font-size: 22px;
+    color: #5cdbff;
+}
+
+/* AI SECTION */
+.ai-section {
+    flex-shrink: 0;
+
+    margin-top: 12px;
+}
+
+.ai-panel {
+    padding: 12px;
+
+    background: rgba(7, 20, 38, 0.88);
+
+    border: 1.5px solid #4ed7ff;
+    border-radius: 17px;
+
+    box-shadow: 0 0 10px rgba(0, 195, 255, 0.35);
+}
+
+.ai-title {
+    padding: 9px;
+    margin-bottom: 9px;
+}
+
+/* AI FORM */
+#aiForm {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#aiQuestion {
+    width: 100%;
+    min-width: 0;
+
+    padding: 10px;
+
+    color: white;
+    background: #0a1b30;
+
+    border: 1px solid #48d5ff;
+    border-radius: 8px;
+
+    outline: none;
+}
+
+#aiQuestion:focus {
+    box-shadow: 0 0 8px rgba(0, 195, 255, 0.5);
+}
+
+#aiQuestion::placeholder {
+    color: #b8c9d9;
+    font-size: 12px;
+}
+
+/* AI BUTTON */
+.ai-button {
+    width: 100%;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+
+    background: linear-gradient(
+        100deg,
+        #0757ff,
+        #087dff,
+        #1339c9
+    );
+
+    border: 1px solid #56d9ff;
+    border-radius: 9px;
+
+    box-shadow: 0 0 10px rgba(0, 100, 255, 0.4);
+
+    cursor: pointer;
+}
+
+.ai-button:hover {
+    filter: brightness(1.2);
+}
+
+/* AI MESSAGE */
+.ai-message {
+    max-height: 35px;
+    overflow: hidden;
+
+    margin-top: 5px;
+
+    color: #8ce7ff;
+    font-size: 11px;
+    line-height: 1.3;
+
+    overflow-wrap: anywhere;
+}
+
+/* FOOTER */
+.footer {
+    flex-shrink: 0;
+
+    padding: 8px 2px 0;
+    margin-top: 5px;
+
+    text-align: center;
+
+    color: #c1d0df;
+    font-size: 10px;
+}
+
+/* SHORT SCREENS */
+@media (max-height: 700px) {
+
+    .page-content {
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+
+    .header {
+        margin-bottom: 5px;
+    }
+
+    .hero {
+        margin-bottom: 7px;
+    }
+
+    .hero h1 {
+        font-size: clamp(20px, 4.5vw, 28px);
+    }
+
+    .diet-panel {
+        padding: 8px;
+    }
+
+    .panel-title {
+        padding: 7px;
+        margin-bottom: 6px;
+    }
+
+    .diet-card {
+        padding: 6px;
+        margin-bottom: 6px;
+    }
+
+    .diet-text h2 {
+        margin-bottom: 3px;
+    }
+
+    .ai-section {
+        margin-top: 7px;
+    }
+
+    .ai-panel {
+        padding: 8px;
+    }
+
+    .ai-title {
+        padding: 6px;
+        margin-bottom: 6px;
+    }
+
+    #aiForm {
+        gap: 5px;
+    }
+
+    #aiQuestion,
+    .ai-button {
+        padding: 7px;
+    }
+
+    .footer {
+        padding-top: 4px;
+    }
+
+}

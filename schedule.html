@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#071321">
+
+    <title>AI COACH | Daily Schedule</title>
+
+    <!-- CSS Connection -->
+    <link rel="stylesheet" href="schedule.css">
+</head>
+
+<body>
+
+    <!-- MAIN SCHEDULE PAGE -->
+    <main class="schedule-page">
+
+        <!-- BACKGROUND OVERLAY -->
+        <div class="background-overlay"></div>
+
+        <!-- PAGE CONTENT -->
+        <div class="page-content">
+
+            <!-- HEADER -->
+            <header class="header">
+
+                <a href="../homepage.html" class="logo">
+                    <span class="logo-icon">🏃</span>
+
+                    <span class="logo-text">
+                        AI <span>COACH</span>
+                    </span>
+                </a>
+
+                <!-- MENU BUTTON -->
+                <button
+                    type="button"
+                    class="menu-button"
+                    id="menuButton"
+                    aria-label="Open navigation menu">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </header>
+
+            <!-- NAVIGATION -->
+            <nav class="navigation" id="navigation">
+
+                <a href="../homepage.html">Home</a>
+
+                <a href="../Runningtracker/running.html">
+                    Running Tracker
+                </a>
+
+                <a href="../fitness-guidance/fitness.html">
+                    Fitness Guidance
+                </a>
+
+                <a href="../diet-rules/diet.html">
+                    Diet Rules
+                </a>
+
+                <a href="schedule.html">Schedule</a>
+
+            </nav>
+
+            <!-- PAGE HEADING -->
+            <section class="hero">
+
+                <h1>
+                    ATHLETE DAILY
+                    <span>SCHEDULE</span>
+                </h1>
+
+                <p>Plan your day. Train better. Perform stronger.</p>
+
+            </section>
+
+            <!-- DAILY SCHEDULE BUTTONS -->
+            <section class="schedule-list">
+
+                <!-- BUTTON 1: WAKE UP -->
+                <a href="wake-up/wakeup.html"
+                   class="schedule-card">
+
+                    <div class="schedule-icon">🏃</div>
+
+                    <div class="schedule-text">
+
+                        <h2>05:30 AM - WAKE UP</h2>
+
+                        <p>
+                            Light stretching, 5km jog
+                            and dynamic mobility.
+                        </p>
+
+                    </div>
+
+                    <div class="schedule-image">🗺️</div>
+
+                    <span class="arrow">›</span>
+
+                </a>
+
+                <!-- BUTTON 2: BREAKFAST -->
+                <a href="breakfast/breakfast.html"
+                   class="schedule-card">
+
+                    <div class="schedule-icon">🍽️</div>
+
+                    <div class="schedule-text">
+
+                        <h2>07:30 AM - BREAKFAST</h2>
+
+                        <p>
+                            Eggs, oatmeal, nuts
+                            and a balanced breakfast.
+                        </p>
+
+                    </div>
+
+                    <div class="schedule-image">🥚</div>
+
+                    <span class="arrow">›</span>
+
+                </a>
+
+                <!-- BUTTON 3: LUNCH -->
+                <a href="lunch/lunch.html"
+                   class="schedule-card">
+
+                    <div class="schedule-icon">🍽️</div>
+
+                    <div class="schedule-text">
+
+                        <h2>12:30 PM - LUNCH</h2>
+
+                        <p>
+                            Protein, complex carbohydrates
+                            and green vegetables.
+                        </p>
+
+                    </div>
+
+                    <div class="schedule-image">🥗</div>
+
+                    <span class="arrow">›</span>
+
+                </a>
+
+                <!-- BUTTON 4: SPORTS AND GYM -->
+                <a href="sports-gym/sports-gym.html"
+                   class="schedule-card">
+
+                    <div class="schedule-icon">🏋️</div>
+
+                    <div class="schedule-text">
+
+                        <h2>04:30 PM - SPORTS &amp; GYM</h2>
+
+                        <p>
+                            Sports drills and
+                            strength training.
+                        </p>
+
+                    </div>
+
+                    <div class="schedule-image">💪</div>
+
+                    <span class="arrow">›</span>
+
+                </a>
+
+                <!-- BUTTON 5: DINNER -->
+                <a href="dinner/dinner.html"
+                   class="schedule-card">
+
+                    <div class="schedule-icon">🍽️</div>
+
+                    <div class="schedule-text">
+
+                        <h2>08:30 PM - DINNER</h2>
+
+                        <p>
+                            Balanced dinner, hydration
+                            and recovery.
+                        </p>
+
+                    </div>
+
+                    <div class="schedule-image">🥦</div>
+
+                    <span class="arrow">›</span>
+
+                </a>
+
+            </section>
+
+            <!-- AI BOX SECTION -->
+            <section class="ai-section">
+
+                <div class="ai-panel">
+
+                    <h2 class="ai-title">ASK AI BOX...</h2>
+
+                    <form id="aiForm">
+
+                        <input
+                            type="text"
+                            id="aiQuestion"
+                            placeholder="Ask about your schedule..."
+                            aria-label="Ask about your schedule"
+                            required>
+
+                        <button type="submit" class="ai-button">
+                            🤖 AI BOX
+                            <span>→</span>
+                        </button>
+
+                    </form>
+
+                    <p
+                        id="aiMessage"
+                        class="ai-message"
+                        aria-live="polite">
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="footer">
+                AI COACH | TRAIN SMART • STAY STRONG
+            </footer>
+
+        </div>
+
+    </main>
+
+    <!-- JAVASCRIPT CONNECTION -->
+    <script src="schedule.js"></script>
+
+</body>
+
+</html>

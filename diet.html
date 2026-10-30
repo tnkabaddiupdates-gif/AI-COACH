@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#071321">
+
+    <title>AI COACH | Diet Rules</title>
+
+    <!-- CSS Connection -->
+    <link rel="stylesheet" href="diet.css">
+</head>
+
+<body>
+
+    <!-- Main Page -->
+    <main class="diet-page">
+
+        <!-- Background Overlay -->
+        <div class="background-overlay"></div>
+
+        <!-- Main Content -->
+        <div class="page-content">
+
+            <!-- Header -->
+            <header class="header">
+
+                <a href="../homepage.html" class="logo">
+
+                    <span class="logo-icon">🏃</span>
+
+                    <span class="logo-text">
+                        AI <span>COACH</span>
+                    </span>
+
+                </a>
+
+                <button
+                    class="menu-button"
+                    id="menuButton"
+                    type="button"
+                    aria-label="Open menu">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </header>
+
+            <!-- Navigation -->
+            <nav class="navigation" id="navigation">
+
+                <a href="../homepage.html">Home</a>
+
+                <a href="../Runningtracker/running.html">
+                    Running Tracker
+                </a>
+
+                <a href="../diet-rules/diet.html">
+                    Diet Rules
+                </a>
+
+                <a href="../schedule/schedule.html">
+                    Schedule
+                </a>
+
+            </nav>
+
+            <!-- Page Heading -->
+            <section class="hero">
+
+                <h1>
+                    DIET <span>RULES</span>
+                    &amp; <span>GOALS</span>
+                </h1>
+
+            </section>
+
+            <!-- Diet Cards Panel -->
+            <section class="diet-panel">
+
+                <div class="panel-title">
+                    DIET PLANS e-BOX
+                </div>
+
+                <!-- Weight Gain -->
+                <a href="weight-gain/weight-gain.html"
+                   class="diet-card">
+
+                    <div class="diet-icon">
+                        🏋️
+                    </div>
+
+                    <div class="diet-text">
+
+                        <h2>Weight Gain</h2>
+
+                        <p>
+                            Bulk up, build mass, and
+                            increase strength.
+                        </p>
+
+                    </div>
+
+                    <div class="diet-image gain-image">
+                        🥤
+                    </div>
+
+                    <span class="arrow">›</span>
+
+                </a>
+
+                <!-- Weight Loss -->
+                <a href="weight-loss/weight-loss.html"
+                   class="diet-card">
+
+                    <div class="diet-icon">
+                        ⚖️
+                    </div>
+
+                    <div class="diet-text">
+
+                        <h2>Weight Loss</h2>
+
+                        <p>
+                            Build healthy habits,
+                            get lean, and stay active.
+                        </p>
+
+                    </div>
+
+                    <div class="diet-image loss-image">
+                        🥗
+                    </div>
+
+                    <span class="arrow">›</span>
+
+                </a>
+
+                <!-- Weight Maintain -->
+                <a href="weight-maintain/weight-maintain.html"
+                   class="diet-card">
+
+                    <div class="diet-icon">
+                        ⏱️
+                    </div>
+
+                    <div class="diet-text">
+
+                        <h2>Fitness Maintain</h2>
+
+                        <p>
+                            Maintain your routine,
+                            energy, and fitness.
+                        </p>
+
+                    </div>
+
+                    <div class="diet-image maintain-image">
+                        🥑
+                    </div>
+
+                    <span class="arrow">›</span>
+
+                </a>
+
+            </section>
+
+            <!-- AI Box -->
+            <section class="ai-section">
+
+                <div class="ai-panel">
+
+                    <div class="ai-title">
+                        ASK AI BOX...
+                    </div>
+
+                    <form id="aiForm">
+
+                        <input
+                            type="text"
+                            id="aiQuestion"
+                            placeholder="Ask your diet question..."
+                            aria-label="Ask your diet question"
+                            required
+                        >
+
+                        <button
+                            type="submit"
+                            class="ai-button">
+
+                            🤖 AI BOX
+                            <span>→</span>
+
+                        </button>
+
+                    </form>
+
+                    <p
+                        id="aiMessage"
+                        class="ai-message"
+                        aria-live="polite">
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+
+                <p>
+                    © 2026 AI COACH |
+                    Fuel Your Performance
+                </p>
+
+            </footer>
+
+        </div>
+
+    </main>
+
+    <!-- JavaScript Connection -->
+    <script src="diet.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AI Coach - Running Tracker</title>
+
+    <link rel="stylesheet" href="running.css">
+</head>
+
+<body>
+
+    <main class="running-page">
+
+        <!-- Header -->
+        <header class="header">
+            <a href="../home.html" class="logo">
+                🏃 AI COACH
+            </a>
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                aria-label="Open menu"
+            >
+                ☰
+            </button>
+        </header>
+
+        <!-- Page title -->
+        <h1 class="page-title">
+            ACTIVE <span>RUN TRACKER</span>
+        </h1>
+
+        <!-- Top statistics -->
+        <section class="stats-panel top-stats">
+
+            <div class="stat-card">
+                <p>DURATION / TIME</p>
+                <h2 id="duration">00:00</h2>
+                <small>min / sec</small>
+            </div>
+
+            <div class="stat-card">
+                <p>TOTAL KM</p>
+                <h2 id="distance">0.00</h2>
+                <small>km</small>
+            </div>
+
+            <div class="stat-card">
+                <p>LAPS</p>
+                <h2 id="laps">0</h2>
+                <small>laps</small>
+            </div>
+
+        </section>
+
+        <!-- Map -->
+        <section class="map-panel">
+
+            <div id="map">
+                <p class="map-message">
+                    Map loading...
+                </p>
+            </div>
+
+            <p id="locationStatus" class="status-message">
+                Press START to begin your run.
+            </p>
+
+        </section>
+
+        <!-- Bottom statistics -->
+        <section class="stats-panel bottom-stats">
+
+            <div class="stat-card">
+                <p>AVERAGE SPEED</p>
+                <h2 id="averageSpeed">0.0</h2>
+                <small>km/h</small>
+            </div>
+
+            <div class="stat-card">
+                <p>SPEED</p>
+                <h2 id="currentSpeed">0.0</h2>
+                <small>km/h</small>
+            </div>
+
+            <div class="stat-card">
+                <p>MAX SPEED</p>
+                <h2 id="maxSpeed">0.0</h2>
+                <small>km/h</small>
+            </div>
+
+            <button id="aiCoachButton" class="ai-button">
+                AI TRACK COACH
+            </button>
+
+        </section>
+
+        <!-- Run controls -->
+        <section class="controls">
+
+            <button id="startButton" class="control-button start">
+                START
+            </button>
+
+            <button
+                id="pauseButton"
+                class="control-button pause"
+                hidden
+            >
+                PAUSE
+            </button>
+
+            <button
+                id="resumeButton"
+                class="control-button resume"
+                hidden
+            >
+                RESUME
+            </button>
+
+            <button
+                id="stopButton"
+                class="control-button stop"
+                hidden
+            >
+                STOP
+            </button>
+
+        </section>
+
+        <p class="footer-text" id="footerText">
+            Start your run to track your performance.
+        </p>
+
+    </main>
+
+    <!--
+      Replace YOUR_GOOGLE_MAPS_API_KEY with your actual API key.
+      This is a browser-side Maps API key, so restrict it to your website.
+    -->
+    <script
+        async
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap&loading=async"
+    ></script>
+
+    <script src="running.js"></script>
+
+</body>
+</html>
